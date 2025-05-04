@@ -5,7 +5,7 @@ s3_client = boto3.client('s3')
 
 #My modifications to access Output bucket name
 # Note: In full disclosure, I used a combination of ChatGPT and AWS documentation to 
-# implement this part of the code
+# implement this part of the code (see sqs_fanout_stack.py for the reasoning why)
 OUTPUT_BUCKET = os.environ['OUTPUT_BUCKET']
 
 def resize_image(image_path, resized_path):
